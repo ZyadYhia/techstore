@@ -1,4 +1,7 @@
 <?php require_once("./includes/header.php");?>		
+<?php
+
+?>
 	<!-- Home -->
 
 	<div class="home">

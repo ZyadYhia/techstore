@@ -18,5 +18,13 @@
   "phI": {
     "prefix": "phI",
     "body": ["<?php require_once('${1:}');?>"]
+  },
+  "pFe": {
+    "prefix": "pFe",
+    "body": [
+      "<?php foreach (${1:variable} as ${2:key}){",
+      "${3:#code...}",
+      "}?>"
+    ]
   }
 }

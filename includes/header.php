@@ -1,4 +1,9 @@
 <?php require_once('app.php');?>
+<?php
+use TechStore\Classes\Models\Cats;
+$c = new Cats;
+$cats = $c->selectAll("id, name")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,14 +119,9 @@
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>
+									<?php foreach ($cats as $cat){?>
+									<li><a href="category.php?id= <?=$cat['name'];?>"><?=$cat['name'];?> <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<?php } ?>
 								</ul>
 							</div>
 
