@@ -17,14 +17,18 @@
   // }
   "phI": {
     "prefix": "phI",
-    "body": ["<?php require_once('${1:}');?>"]
+    "body": ["<?= $1 ?>"]
   },
   "pFe": {
     "prefix": "pFe",
     "body": [
-      "<?php foreach (${1:variable} as ${2:key}){",
+      "<?php foreach (${1:variable} as ${2:key}):?>",
       "${3:#code...}",
-      "}?>"
+      "<?php endforeach; ?>"
     ]
+  },
+  "if php": {
+    "prefix": "pi",
+    "body": ["<?php if():?>", "$3", "<?php else: ?>", "$3", "<?php endif ?>"]
   }
 }

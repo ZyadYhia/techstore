@@ -119,9 +119,9 @@ $cats = $c->selectAll("id, name")
 								</div>
 
 								<ul class="cat_menu">
-									<?php foreach ($cats as $cat){?>
-									<li><a href="category.php?id= <?=$cat['name'];?>"><?=$cat['name'];?> <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<?php } ?>
+									<?php foreach ($cats as $cat):?>
+									<li><a href="category.php?id= <?=$cat['id'];?>"><?=$cat['name'];?> <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<?php endforeach ?>
 								</ul>
 							</div>
 
